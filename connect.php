@@ -1,0 +1,11 @@
+<?php
+$host='localhost';
+$db='dbmovies';
+$user='root';
+$pass='';
+$attr="mysql:host=$host;dbname=$db";
+$opts=[
+    PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC
+];
+?>
