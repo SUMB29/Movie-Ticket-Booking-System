@@ -32,7 +32,7 @@ if(isset($_SESSION['uid'])){
             <a href="user_dashboard.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
             <a href="movies.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Movies</a>
             <a href="theatre.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Theatres</a>
-            <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Bookings</a>
+            <a href="viewbooking.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Bookings</a>
             <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
             <a href="logout.php" class="text-red-500 px-3 py-2 rounded-md text-sm font-medium">Logout</a>
           </div>
@@ -55,7 +55,7 @@ if(isset($_SESSION['uid'])){
         <a href="user_dashboard.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Home</a>
         <a href="movies.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Movies</a>
         <a href="theatre.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Theatres</a>
-        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Bookings</a>
+        <a href="viewbooking.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Bookings</a>
         <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Profile</a>
         <a href="logout.php" class="block px-3 py-2 rounded-md text-red-500 hover:bg-gray-700">Logout</a>
       </div>

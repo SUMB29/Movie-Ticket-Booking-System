@@ -36,8 +36,8 @@ try {
             <a href="categories.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Categories</a>
             <a href="movies.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Movies</a>
             <a href="theatre.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Theatres</a>
-            <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Users</a>
-            <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Bookings</a>
+            <a href="viewusers.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Users</a>
+            <a href="viewbooking.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Bookings</a>
             <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
             <a href="logout.php" class="text-red-500 px-3 py-2 rounded-md text-sm font-medium">Logout</a>
           </div>
@@ -61,8 +61,8 @@ try {
         <a href="categories.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Categories</a>
         <a href="movies.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Movies</a>
         <a href="theatre.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Theatres</a>
-        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Users</a>
-        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Bookings</a>
+        <a href="viewusers.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Users</a>
+        <a href="viewbooking.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Bookings</a>
         <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Profile</a>
         <a href="logout.php" class="block px-3 py-2 rounded-md text-red-500 hover:bg-gray-700">Logout</a>
       </div>
@@ -106,11 +106,11 @@ try {
           <h3 class="font-bold text-xl mb-2">Theatres</h3>
           <p class="text-gray-400">Manage theatres</p>
         </a>
-        <a href="#" class="bg-gray-800 hover:bg-gray-700 p-6 rounded-lg text-center transition">
+        <a href="viewbooking.php" class="bg-gray-800 hover:bg-gray-700 p-6 rounded-lg text-center transition">
           <h3 class="font-bold text-xl mb-2">Bookings</h3>
           <p class="text-gray-400">View booking history</p>
         </a>
-        <a href="#" class="bg-gray-800 hover:bg-gray-700 p-6 rounded-lg text-center transition">
+        <a href="viewusers.php" class="bg-gray-800 hover:bg-gray-700 p-6 rounded-lg text-center transition">
           <h3 class="font-bold text-xl mb-2">Users</h3>
           <p class="text-gray-400">Manage users</p>
         </a>

@@ -165,7 +165,7 @@ if (isset($_POST['add'])) {
 
         echo "<script>
                 alert('Booking confirmed for seats: $selectedSeats'); 
-                window.location='index.php';
+                window.location='movies.php';
               </script>";
         exit;
     } else {
