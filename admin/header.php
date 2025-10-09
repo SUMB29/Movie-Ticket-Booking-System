@@ -38,7 +38,7 @@ try {
             <a href="theatre.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Theatres</a>
             <a href="viewusers.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Users</a>
             <a href="viewbooking.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Bookings</a>
-            <a href="#" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
+            <a href="profile.php" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
             <a href="logout.php" class="text-red-500 px-3 py-2 rounded-md text-sm font-medium">Logout</a>
           </div>
         </div>
@@ -63,7 +63,7 @@ try {
         <a href="theatre.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Theatres</a>
         <a href="viewusers.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Users</a>
         <a href="viewbooking.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Bookings</a>
-        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-700">Profile</a>
+        <a href="profile.php" class="block px-3 py-2 rounded-md hover:bg-gray-700">Profile</a>
         <a href="logout.php" class="block px-3 py-2 rounded-md text-red-500 hover:bg-gray-700">Logout</a>
       </div>
     </div>
