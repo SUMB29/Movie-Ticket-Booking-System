@@ -73,7 +73,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo '<td class="border p-2">' . htmlspecialchars($row['name']) . '</td>';
     echo '<td class="border p-2">' . htmlspecialchars($row['email']) . '</td>';
     echo '<td class="flex justify-center border p-2 space-x-2">';
-echo '<a href="viewusers.php?delete=' . $row['userid'] . '" onclick="return confirm(\'Delete this user?\')" class="bg-red-500 text-white px-2 py-1 rounded">Delete</a>';
+echo '<a href="viewusers.php?delete=' . $row['userid'] . '" onclick="return confirm(\'Delete this user?\')" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">Delete</a>';
     echo '</tr>';
 }
 ?>

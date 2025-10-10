@@ -171,7 +171,7 @@ if (isset($_POST['register'])) {
             ':role'     => $role
         ]);
 
-        // ✅ Show alert then redirect
+        // Show alert then redirect
         //header('login_process.php');
         echo "<script>
                 alert('Registration successful!');

@@ -4,7 +4,7 @@ require_once '../connect.php';
 
 if (!isset($_SESSION['userid'])) {
     echo "<script>
-            window.location.href = 'index.php';
+            window.location.href = '../index.php';
           </script>";
     exit;
 }
@@ -79,11 +79,11 @@ INNER JOIN movies ON booking.movieid = movies.movieid
 INNER JOIN users ON booking.userid = users.userid
 INNER JOIN theatre ON theatre.theatreid = booking.theatreid
 INNER JOIN categories ON movies.catid = categories.catid
-WHERE users.userid = :id ORDER BY booking.bookingid DESC;
+ORDER BY booking.bookingid DESC;
 ";
 
-$result = $pdo->prepare($sql);
-$result->execute([':id' => $_SESSION['userid']]);
+$result = $pdo->query($sql);
+
 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo '<tr>';
@@ -96,12 +96,12 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo '<td class="border p-2">' . htmlspecialchars($row['location']) . '</td>';
     echo '<td class="border p-2">' . htmlspecialchars(($row['status']==0)?"pending":"Approved") . '</td>';
     echo '<td class="flex justify-center border p-2 space-x-2">';
-echo '<a href="viewbooking.php?delete=' . $row['bookingid'] . '" onclick="return confirm(\'Delete this booking?\')" class="bg-red-500 text-white px-2 py-1 rounded">Delete</a>';
+echo '<a href="viewbooking.php?delete=' . $row['bookingid'] . '" onclick="return confirm(\'Delete this booking?\')" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">Delete</a>';
 
 if ($row['status'] == 0) {
 echo '<a href="viewbooking.php?approve=' . $row['bookingid'] . '&theatre=' . $row['theatre_name'] . '&movie=' . $row['title'] . '" 
          onclick="return confirm(\'Approve Booking?\')" 
-         class="bg-green-500 text-white px-2 py-1 rounded ml-2">
+         class="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded ml-2">
          Approve
       </a>';
 
@@ -133,11 +133,10 @@ if (isset($_GET['approve'])) {
             SELECT * FROM booking 
             INNER JOIN theatre ON theatre.theatreid=booking.theatreid
             INNER JOIN movies ON booking.movieid=movies.movieid
-            WHERE booking.bookingid = :id AND booking.userid = :user AND theatre.name = :theatre AND movies.title = :movie
+            WHERE booking.bookingid = :id AND theatre.name = :theatre AND movies.title = :movie
         ");
         $check->execute([
             ':id'      => $id,
-            ':user'    => $_SESSION['userid'],
             ':theatre' => $theatre,
             ':movie'   => $movie
         ]);
@@ -153,11 +152,10 @@ if (isset($_GET['approve'])) {
             UPDATE booking INNER JOIN  theatre ON theatre.theatreid=booking.theatreid
             INNER JOIN movies ON booking.movieid=movies.movieid
             SET booking.status = 1 
-            WHERE booking.bookingid = :id AND booking.userid = :user AND theatre.name = :theatre AND movies.title = :movie
+            WHERE booking.bookingid = :id AND theatre.name = :theatre AND movies.title = :movie
         ");
         $stmt->execute([
             ':id'      => $id,
-            ':user'    => $_SESSION['userid'],
             ':theatre' => $theatre,
             ':movie'   => $movie
         ]);

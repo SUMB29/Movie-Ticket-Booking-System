@@ -47,7 +47,7 @@ try {
 
 <!-- Table -->
 <div class="bg-white p-6 rounded-2xl shadow-lg w-11/12 lg:w-4/5 m-auto mt-10 mb-60">
-  <h2 class="text-xl font-semibold mb-4">Your Bookings</h2>
+  <h2 class="text-xl font-semibold mb-4">Bookings History</h2>
   <table class="w-full border-collapse border border-gray-300 text-center">
     <thead>
       <tr class="bg-gray-200">
@@ -96,12 +96,12 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo '<td class="border p-2">' . htmlspecialchars($row['location']) . '</td>';
     echo '<td class="border p-2">' . htmlspecialchars(($row['status']==0)?"pending":"Approved") . '</td>';
 echo '<td class="flex justify-center border p-2 space-x-2">';
-echo '<a href="viewbooking.php?delete=' . $row['bookingid'] . '" onclick="return confirm(\'Delete this booking?\')" class="bg-red-500 text-white px-2 py-1 rounded">Delete</a>';
+echo '<a href="viewbooking.php?delete=' . $row['bookingid'] . '" onclick="return confirm(\'Delete this booking?\')" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">Delete</a>';
 
 if ($row['status'] == 1) {
     echo '<a href="payment.php?payment=' . $row['bookingid'] . '" 
              onclick="return confirm(\'Make Payment online?\')" 
-             class="bg-green-500 text-white px-2 py-1 rounded ml-2">
+             class="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded ml-2">
              Pay Now
           </a>';
 }
