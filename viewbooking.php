@@ -94,7 +94,11 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo '<td class="border p-2">' . htmlspecialchars($row['catname']) . '</td>';
     echo '<td class="border p-2">' . htmlspecialchars($row['theatre_name']) . '</td>';
     echo '<td class="border p-2">' . htmlspecialchars($row['location']) . '</td>';
-    echo '<td class="border p-2">' . htmlspecialchars(($row['status']==0)?"pending":"Approved") . '</td>';
+   echo '<td class="border p-2">' . htmlspecialchars(
+    $row['status'] == 0 ? "Pending" :
+    ($row['status'] == 1 ? "Approved" : "Payment Successful")
+) . '</td>';
+
 echo '<td class="flex justify-center border p-2 space-x-2">';
 echo '<a href="viewbooking.php?delete=' . $row['bookingid'] . '" onclick="return confirm(\'Delete this booking?\')" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">Delete</a>';
 
